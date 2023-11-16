@@ -1,0 +1,24 @@
+Câu hỏi soạn bài:
+1. JOIN sử dụng để làm gì? Các loại JOIN trong MySQL?
+3. WHERE sử dụng để làm gì?
+4. GROUP BY, HAVING sử dụng để làm gì?
+5. ORDER BY sử dụng để làm gì?
+
+
+1. Lấy ra thông tin các học viên, và cho biết các học viên đang theo học lớp nào (sử dụng join).
+
+2. Lấy ra thông tin các học viên, và cho biết các học viên đang theo học lớp nào và cả các bạn đã đăng ký nhưng chưa có lớp học.
+
+3. Lấy thông tin của các học viên tên “Hai” và 'Huynh’.
+
+4. Lấy ra học viên có điểm lớn hơn 5 .
+
+5. Lấy ra học viên có họ là “nguyen”
+
+6. Thông kế số lượng học sinh theo từng loại điểm.
+
+7. Thông kế số lượng học sinh theo điểm và điểm phải lớn hơn 5
+
+8. Thông kế số lượng học sinh theo điểm lớn hơn 5 và chỉ hiện thị với số lượng>=2
+
+9. Lấy ra danh sách học viên của lớp c1121g1 và sắp xếp tên học viên theo alphabet.
