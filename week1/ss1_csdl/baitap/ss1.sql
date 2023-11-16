@@ -36,6 +36,6 @@ values("van bao",21,"viet nam"),
 SET SQL_SAFE_UPDATES = 1;
 delete from student;
 
-	select age
-	from student
-    where age >= 29;
+select age
+from student
+where age >= 29;
