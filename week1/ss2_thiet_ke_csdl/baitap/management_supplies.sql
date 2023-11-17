@@ -74,7 +74,7 @@ modify column  address_supplier varchar(40) not null;
 
 -- 1 - n phone
 create table supplier_phone (
-    id_phone int auto_increment primary key,
+    id_phone int primary key,
     id_supplier VARCHAR(20) not null,
     phone_supplier VARCHAR(10),
     FOREIGN KEY (id_supplier) REFERENCES material_supplier(id_supplier)

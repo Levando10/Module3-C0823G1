@@ -30,6 +30,8 @@ order_quantity int check(order_quantity > 0),
 foreign key (order_id) references `order`(order_id),
 foreign key (product_id) references product(product_id)
 );
+ALTER TABLE order_detail
+ADD PRIMARY KEY (product_id, order_id);
 -- data customer
 
 insert into customer(customer_name,customer_age) 
