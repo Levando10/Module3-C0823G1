@@ -1,33 +1,31 @@
- -- bai tap ex1
+-- bai tap ex1
     -- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
     
 SELECT 
     *
 FROM
     subject
-GROUP BY subject.id
-HAVING subject.credit >= ALL (SELECT 
-        subject.credit
-    FROM
-        subject
-    GROUP BY subject.id);
+WHERE
+    credit IN (SELECT 
+            MAX(credit)
+        FROM
+            subject);
     
     
     -- ex 2
     -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
     
- SELECT 
-    subject.*, mark.mark
+SELECT 
+    subject.*
 FROM
-    subject
+    subject 
         JOIN
-    mark ON mark.sub_id = subject.id
-GROUP BY mark.id
-HAVING mark.mark >= ALL (SELECT 
-        mark.mark
-    FROM
-        mark
-    GROUP BY mark.id);
+    mark  ON subject.sub_id = mark.sub_id
+WHERE
+    mark.mark IN (SELECT 
+            MAX(mark.mark)
+        FROM
+            mark);
     
     
     
