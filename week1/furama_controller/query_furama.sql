@@ -34,7 +34,7 @@ order by so_lan_dat_phong asc;
 
 select khach_hang.ma_khach_hang, khach_hang.ho_ten ,loai_khach.ten_loai_khach,
 hop_dong.ma_hop_dong , dich_vu.ten_dich_vu , hop_dong.ngay_lam_hop_dong, hop_dong.ngay_ket_thuc,
-SUM(dich_vu.chi_phi_thue + dich_vu_di_kem.gia * hop_dong_chi_tiet.so_luong) AS tong_tien
+(ifnull(dich_vu.chi_phi_thue, 0) + sum(ifnull(hop_dong_chi_tiet.so_luong, 0) * ifnull(dich_vu_di_kem.gia, 0))) AS tong_tien
 from khach_hang
 left join hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang 
 join loai_khach on loai_khach.ma_loai_khach = khach_hang.ma_loai_khach
